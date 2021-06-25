@@ -1,0 +1,12 @@
+<header> 
+    <nav class="navbar navbar-expand-sm bg-dark" style="font-size: 24px; background-color: black;">
+        <ul class="navbar-nav" style="align-items: center;">
+          <li class="nav-item"><a class="nav-link" href="/" style="color: white !important;">Home</a></li>
+          {{#if loggedIn}}<li class="nav-item"><a class="nav-link" href="/insertProduct" style="color: white !important;">Insertar</a></li>
+          <li class="nav-item"><a class="nav-link" href="/api/product" style="color: white !important;">Productos</a></li>{{/if}}
+          {{#unless loggedIn}}<li class="nav-item"><a class="nav-link" href="/users/register" style="color: white !important;">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="/auth/login" style="color: white !important;">Iniciar Sesión</a></li>{{/unless}}
+          {{#if loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/logout" style="color: white !important;">Logout</a></li>{{/if}}
+        </ul>
+    </nav>
+</header>
