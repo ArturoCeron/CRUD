@@ -90,7 +90,7 @@ router.post('/api/product', authMid, ( req, res ) =>{
 
     let product = new Product();
     product.name = req.body.name;
-    product.picture = req.body.avatar;
+    product.picture = req.body.picture;
     product.price = req.body.price;
     product.category = (req.body.category).toLowerCase();
     product.description = req.body.description;
